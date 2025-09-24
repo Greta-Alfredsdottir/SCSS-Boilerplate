@@ -2,6 +2,8 @@
 
 $primary-color: green;
 $accent-color: orange;
+$background-color: gray;
+
 
 @mixin border-style($color: $primary-color){
     -webkit-border-radius: 20px;
