@@ -1,15 +1,46 @@
 
-body{
-    background-color: red;
-}
+
 $primary-color: green;
+$accent-color: orange;
 
 @mixin border-style($color: $primary-color){
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
     margin: 20px;
-    border: 1px solid $color
+    border: 10px solid $color;
+    background-color: $accent-color;
 }
 
-section{
-    @include border-style()
+#section1{
+    @include border-style;
+    
 
+}
+#section2{
+    @include border-style;
+
+}
+#section3{
+    @include border-style;
+
+}
+
+//Navigation laves med nesting
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: $accent-color;  }
 }
